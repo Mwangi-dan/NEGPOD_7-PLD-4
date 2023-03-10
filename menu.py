@@ -13,7 +13,7 @@ choices_menu()
 
 # Allowing user to input their choice
 
-option = input("Please enter a number of the choice wildlife category to continue :")
+option = input("Please enter a number corresponding your choice wildlife category to continue :")
 
 
 def learn_or_test(option_name):
@@ -35,7 +35,7 @@ else:
 
 import webbrowser
 
-second_option = input("Please enter a number of the choice to continue :")
+second_option = input("Please enter a number corresponding your choice to continue :")
 
 if second_option=="1":
     webbrowser.open_new("https://www.wildlifetrusts.org/learning")
