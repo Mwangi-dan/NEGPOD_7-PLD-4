@@ -55,7 +55,7 @@ else:
             print("Incorrect choice\n")
 
         q2 = input("Which animal is the only animal that can’t jump? ")
-        if q2 == '':
+        if q2 == 'Elephant':
             print("Congratulations!\n")
             score += 1
         else:
@@ -63,41 +63,38 @@ else:
 
         # ask team about this one
         q3 = input("A cat’s urine doesn’t glow under black light? True or False: ")
-        if q2 == '':
+        if q2 == 'True':
             print("Congratulations!\n")
             score += 1
         else:
             print("Incorrect choice\n")
 
         q4 = input("Which mammal has a cube-shaped poop? ")
-        if q4 == '':
+        if q4 == 'Wombat':
             print("Congratulations!\n")
             score += 1
         else:
             print("Incorrect choice\n")
 
-        q5 = input("What mammal can catch leprosy? ")
-        if q5 == '':
+        q5 = input("What mammal carries leprosy? ")
+        if q5 == 'armadillos':
             print("Congratulations!\n")
             score += 1
         else:
             print("Incorrect choice\n")
 
         q6 = input("Dogs are not colour-blind but they can’t see one colour, What’s that colour? ")
-        if q6 == '':
+        if q6 == 'blue' or 'yellow':
             print("Congratulations!\n")
             score += 1
         else:
             print("Incorrect choice\n")
 
         q7 = input("Koalas sleep partially the whole day. How many hours do you think they sleep up to? ")
-        if q7 == '':
+        if q7 == '20':
             print("Congratulations!\n")
             score += 1
         else:
             print("Incorrect choice\n")
 
         print("Well done on completing the trivia.\nYour total score is:\b {:d}".format(score))
-
-
-
