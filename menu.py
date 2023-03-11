@@ -41,9 +41,8 @@ if second_option=="1":
     webbrowser.open_new("https://www.wildlifetrusts.org/learning")
 
 else:
-     # Terrestrial questions
     score = 0
-
+     # Terrestrial questions
     if option == '1':
         print("TRIVIA QUESTIONS")
 
@@ -54,7 +53,7 @@ else:
         else:
             print("Incorrect choice\n")
 
-        q2 = input("Which animal is the only animal that can’t jump? ")
+        q2 = input("Which animal is the only animal that can't jump? ")
         if q2 == 'Elephant':
             print("Congratulations!\n")
             score += 1
@@ -62,7 +61,7 @@ else:
             print("Incorrect choice\n")
 
         # ask team about this one
-        q3 = input("A cat’s urine doesn’t glow under black light? True or False: ")
+        q3 = input("A cat's urine doesn't glow under black light? True or False: ")
         if q2 == 'True':
             print("Congratulations!\n")
             score += 1
@@ -83,7 +82,7 @@ else:
         else:
             print("Incorrect choice\n")
 
-        q6 = input("Dogs are not colour-blind but they can’t see one colour, What’s that colour? ")
+        q6 = input("Dogs are not colour-blind but they can't see one colour, What's that colour? ")
         if q6 == 'blue' or 'yellow':
             print("Congratulations!\n")
             score += 1
@@ -100,7 +99,6 @@ else:
         print("Well done on completing the trivia.\nYour total score is:\b {:d}".format(score))
 
     # Aquatic Wildlife
-    score = 0
 
     if option == '2':
         print("TRIVIA QUESTIONS")
@@ -179,7 +177,7 @@ else:
 
         print("Well done on completing the trivia.\nYour total score is:\b {:d}".format(score))
 
-    elif option == '3':
+    if option == '3':
         q1 = input(f"Question 1: Which bird's head has to be upside when it eats?\n a. Flammingo\n b. Angel\n c. Bubba\n d. Baldy\n")
 
         if q1 =='a' or 'A':
@@ -193,30 +191,29 @@ else:
             print(f"Congratulations!")
             score+=1
         else:
-            print("incorrect choice!")
+            print(f"incorrect choice!")
 
         q3 = input("Question 3: My eyes are bigger than my brain, What's my name?\n a. Angel\n b. Ostrich\n c. Flammingo\n d. Bird\n")
 
         if q3 =='':
-            print("\nCongratulations!\n")
+            print(f"Congratulations!")
             score+=1
         else:
-            print("\nincorrect choice!\n")
+            print(f"incorrect choice!")
 
-        q4 = input(f"Question 4: 59 " + "%" + " of my ratio are female-female breeding, Name the bird?\n a. House sparrow\n b. Duck\n c. Bird d. Bat\n")
+        q4 = input(f"Question 4: 59 " + "%" + " of my ratio are female-female breeding, Name the bird?\n a. House sparrow\n b. Duck\n c. Bird\n d. Bat\n")
 
-        if q4 =='':
+        if q4 =='a' or 'A':
             print("Congratulations!")
             score+=1
         else:
-            print("incorrect choice!")
+            print(f"incorrect choice!")
 
         q5 = input("Question 5: Owls don't have eyeballs, they have ______.\n a. Eye tubes\n b. eye balls c. eye lenses\n d. eye lashes\n")
 
         if q5 =='a' or 'A':
-            print("Congratulations!")
+            print(f"Congratulations!")
             score+=1
         else:
-            print("incorrect choice!")
-    print("your total score is :", str(score), " out of 5.")
-
+            print(f"incorrect choice!")
+        print("your total score is :", str(score), " out of 5.")
