@@ -1,6 +1,6 @@
-# Welcoming user ot the game
+# Welcoming user to the game
 
-print("Hello, Below is a menu of Wildlife categories : ")
+print("Hello, below is a menu of wildlife categories : ")
 
 # Function containing choices
 
