@@ -99,5 +99,85 @@ else:
 
         print("Well done on completing the trivia.\nYour total score is:\b {:d}".format(score))
 
+    # Aquatic Wildlife
+    option = '2' #Change when pasting code
+    user_answer = ' '
+    score = 0
 
+    if option == '2':
+        print("TRIVIA QUESTIONS")
+
+        q1 = input("What animal has no blood and no brain? ")
+        if q1 == 'The jellyfish':
+            print("Congratulations!")
+            score += 1
+        else:
+            print("Incorrect choice.")
+
+        q2 = input("I am a shrimp. Where is my heart located? ")
+        if q2 == 'On your head':
+            print("Congratulations!")
+            score += 1
+        if q2 == 'On the head':
+            print("Congratulations!")
+            score += 1
+        if q2 == 'The head':
+            print("Congratulations!")
+            score += 1
+        else:
+            print("Incorrect choice.")
+
+        q3 = input("What is the slowest fish? ")
+        if q3 == 'The dwarf seahorse':
+            print("Congratulations!")
+            score += 1
+        if q3 == 'The seahorse':
+            print("Congratulations!")
+            score += 1
+        else:
+            print("Incorrect choice.")
+    
+        q4 = input("Which animal sleeps with only half of its brain at a time? ")
+        if q4 == 'The dolphin':
+            print("Congratulations!")
+            score += 1
+        else:
+            print("Incorrect choice.")
+    
+        q5 = input("Which sea creature has blue blood? ")
+        if q4 == 'The horseshoe crab':
+            print("Congratulations!")
+            score += 1
+        else:
+            print("Incorrect choice.")
+    
+        q6 = input("Platypuses swim with their eyes closed. True or False? ")
+        if q6 == 'True':
+            print("Congratulations!")
+            score += 1
+        else:
+            print("Incorrect choice.")
+
+        q7 = input("What is the most venomous fish? ")
+        if q7 == 'The reef stonefish':
+            print("Congratulations!")
+            score += 1
+        else:
+            print("Incorrect choice.")
+    
+        q8 = input("Which sea creature lays the biggest egg in the world?")
+        if q8 == 'The whale shark':
+            print("Congratulations!")
+            score += 1
+        else:
+            print("Incorrect choice.")
+
+        q9 = input("How many hearts does an octopus have? ")
+        if q9 == 'Three':
+            print("Congratulations!")
+            score += 1
+        else:
+            print("Incorrect choice.")
+
+        print("Well done on completing the trivia.\nYour total score is:\b {:d}".format(score))
 
