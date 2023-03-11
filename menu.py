@@ -41,7 +41,6 @@ if second_option=="1":
     webbrowser.open_new("https://www.wildlifetrusts.org/learning")
 
 else:
-    score = 0
      # Terrestrial questions
     score = 0
 
@@ -101,8 +100,6 @@ else:
         print("Well done on completing the trivia.\nYour total score is:\b {:d}".format(score))
 
     # Aquatic Wildlife
-    option = '2'
-    user_answer = ' '
     score = 0
 
     if option == '2':
@@ -182,7 +179,7 @@ else:
 
         print("Well done on completing the trivia.\nYour total score is:\b {:d}".format(score))
 
-    if option == '3':
+    elif option == '3':
         q1 = input(f"Question 1: Which bird's head has to be upside when it eats?\n a. Flammingo\n b. Angel\n c. Bubba\n d. Baldy\n")
 
         if q1 =='a' or 'A':
