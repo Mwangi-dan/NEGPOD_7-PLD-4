@@ -100,7 +100,7 @@ else:
         print("Well done on completing the trivia.\nYour total score is:\b {:d}".format(score))
 
     # Aquatic Wildlife
-    option = '2' #Change when pasting code
+    option = '2'
     user_answer = ' '
     score = 0
 
