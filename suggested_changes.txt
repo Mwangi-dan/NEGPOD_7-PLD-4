@@ -1,0 +1,52 @@
+PLD-4 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+As you are aware, with this project submission we are supposed to make some changes
+in accordance with the new concepts like OOP and Database management we have learnt.
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+I want us to use this text file as a check list of the tasks we have to accomplish before
+the day of presentation:
+
+1. Implement our code with OOP
+    - Possible classes:
+        * Users 
+        * Question and Answer validation
+        * Game play
+
+2. Incorporate database management (MYSQL):
+    - User database that records:
+        * Login information
+        * Scores: High score etc.
+
+3. Clean up our code
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+This gets me thinking of the flow of our solution. Give me feedback about it.
+
+-- Welcome Message
+-- Options:
+    1. Login to existing user account
+    2. Sign up a new account to play
+    3. Learn more through the sites
+
+    if:
+        1. Enter Credentials
+            1. Play trivia
+                - Choose category
+                - Play game
+                - Display/save score:
+            2. OPTION 3
+
+        2. Register Credentials (Enter username and password)
+            1. Play trivia
+                - Choose category
+                - Play game
+                - Display/save score:
+            2. OPTION 3
+            
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+        
