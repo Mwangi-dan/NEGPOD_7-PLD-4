@@ -53,8 +53,6 @@ class TriviaGame:
 
 
 
-
-
 print("Hello, Below is a menu of Wildlife categories: ")
 
 print("1. Terrestrial wildlife")
