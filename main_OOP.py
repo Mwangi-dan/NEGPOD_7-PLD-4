@@ -4,6 +4,7 @@ import webbrowser
 
 
 class TriviaGame:
+    """class contain functions that ask questions to the user"""
 
 
     def __init__(self):
