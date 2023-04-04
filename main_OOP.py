@@ -1,5 +1,6 @@
 import mysql.connector
 import time
+import webbrowser
 
 
 class TriviaGame:
@@ -244,7 +245,7 @@ if __name__ == "__main__":
         game_play()
     
     elif user_sign_in == 4:
-        pass
+        webbrowser.open_new("https://www.wildlifetrusts.org/learning")
 
     else:
         print("Goodbye!")
