@@ -62,6 +62,8 @@ class TriviaGame:
         # break
 
     def check_answer(self, category):
+        """the functions which verfies if the user answer is right"""
+        
         if category == 1:
             if self.q_number < len(self.terrestrial_qns) -1:
                 user_answer = input("Please enter your answer here: ")
@@ -120,6 +122,8 @@ class TriviaGame:
             
 
 def game_play():
+    """the functions that initialize the game"""
+    
     print("\n\t\t***************")
     print("Hello, Below is a menu of Wildlife categories: ")
 
