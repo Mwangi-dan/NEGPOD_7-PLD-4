@@ -243,7 +243,6 @@ if __name__ == "__main__":
     
     elif user_sign_in == 4:
         webbrowser.open_new("https://www.wildlifetrusts.org/learning")
-        pass
 
     else:
         print("Goodbye!")
