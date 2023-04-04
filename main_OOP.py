@@ -4,7 +4,7 @@ import webbrowser
 
 
 class TriviaGame:
-    """class contain functions that ask questions to the user"""
+    """class of functions that allow the users to intellact with the Wildlife Trivia Game"""
 
 
     def __init__(self):
