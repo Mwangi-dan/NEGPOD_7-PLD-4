@@ -1,5 +1,5 @@
-The code allows a user to learn more about wildlife.
-User is welcomed then proceeds to select a category that they would like to choose
-After making their selection they are made to choose between learning more about the category choice or playing in the trivia
-If they pick the first choice, they are redirected to a Wildlife website
-If the trivia is chosen, they play a trivia game and they get the score at the end of the game  
+The code allows a user to log in, sign up, play as a guest, or be redirected to an informative website. User picks one of the options.
+User is welcomed, then proceeds to select a category of wildlife - terrestrial, aquatic, or aerial - that they would like to be tested on.
+After making their selection they will be shown questions about their chosen wildlife.
+User answers questions correctly or incorrectly.
+At the end of the quiz, the user will be given their numerical score.
