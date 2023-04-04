@@ -46,6 +46,7 @@ class TriviaGame:
         self.aerial_answs = ["Flamingo", "see" or "smell", "Ostrich", "House sparrow", "Eye tubes"]
 
     def ask_question(self, category):
+        """function that asks question to the user"""
 
         if category == 1:
             print("\n" + self.terrestrial_qns[self.q_number])
