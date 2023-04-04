@@ -116,7 +116,7 @@ class TriviaGame:
                 print("Congratulations, you successfully completed the quiz")
                 print("You scored: ", self.score)
 
-
+        # break
             
 
 def game_play():
