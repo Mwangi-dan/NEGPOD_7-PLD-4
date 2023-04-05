@@ -4,6 +4,7 @@ import webbrowser
 
 
 class TriviaGame:
+    """class of functions that allow the users to intellact with the Wildlife Trivia Game"""
 
 
     def __init__(self):
@@ -19,8 +20,8 @@ class TriviaGame:
                                 "Koalas sleep partially the whole day. How many hours do you think they sleep up to? ",
                                 ]
 
-        self.terrestrial_answs = ['Purple', 'Elephant', 'True',
-                                  'Wombat', 'armadillos', 'blue' or 'yellow', '20']
+        self.terrestrial_answs = ['purple', 'elephant', 'true',
+                                  'wombat', 'armadillo', 'blue' or 'yellow', '20' or 'twenty']
 
         self.aquatic_qns = ["What animal has no blood and no brain? ",
                             "I am a shrimp. Where is my heart located? ",
@@ -34,7 +35,7 @@ class TriviaGame:
                             ]
 
         self.aquatic_answs = ['jellyfish', 'head', 'seahorse',
-                            'dolphin', 'horseshoe-crab' , 'True', 'reef-stonefish', 'whale-shark', 'Three']
+                            'dolphin', 'horseshoe crab' , 'true', 'reef stonefish', 'whale shark', 'three' or '3']
         
         self.aerial_qns = ["Which bird's head has to be upside when it eats?",
                            "What's the sense of a kiwi bird?",
@@ -43,9 +44,10 @@ class TriviaGame:
                            "Owls don't have eyeballs, they have __.",
                            ]
         
-        self.aerial_answs = ["Flamingo", "see" or "smell", "Ostrich", "House sparrow", "Eye tubes"]
+        self.aerial_answs = ['flamingo', 'see' or 'smell', 'ostrich', 'house sparrow', 'eye tubes']
 
     def ask_question(self, category):
+        """function that asks question to the user"""
 
         if category == 1:
             print("\n" + self.terrestrial_qns[self.q_number])
@@ -61,6 +63,8 @@ class TriviaGame:
         # break
 
     def check_answer(self, category):
+        """the functions which verfies if the user answer is right"""
+        
         if category == 1:
             if self.q_number < len(self.terrestrial_qns) -1:
                 user_answer = input("Please enter your answer here: ")
@@ -115,10 +119,12 @@ class TriviaGame:
                 print("Congratulations, you successfully completed the quiz")
                 print("You scored: ", self.score)
 
-
+        # break
             
 
 def game_play():
+    """the functions that initialize the game"""
+    
     print("\n\t\t***************")
     print("Hello, Below is a menu of Wildlife categories: ")
 
