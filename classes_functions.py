@@ -46,6 +46,9 @@ class TriviaGame:
         
         self.aerial_answs = ['flamingo', 'see' or 'smell', 'ostrich', 'house sparrow', 'eye tubes']
 
+    def get_score(self):
+        return self.score
+
     def ask_question(self, category):
         """function that asks question to the user"""
 
@@ -60,7 +63,6 @@ class TriviaGame:
         else:
             print("Please enter the right category")
 
-        # break
 
     def check_answer(self, category):
         """the functions which verfies if the user answer is right"""
@@ -79,12 +81,12 @@ class TriviaGame:
                     print("The right answer is " + correct_answer)
                 self.q_number += 1
             else:
-                print("\t********************")
+                header()
                 print("Congratulations, you successfully completed the quiz")
-                print("You scored: ", self.score)
+                print("You scored: ", self.score, end="\n")
 
         elif category == 2:
-            if self.q_number < len(self.aquatic_qns):
+            if self.q_number < len(self.aquatic_qns) -1:
                 user_answer = input("Please enter your answer here: ")
                 correct_answer = self.aquatic_answs[self.q_number]
                 time.sleep(0.3)
@@ -97,9 +99,9 @@ class TriviaGame:
                     print("The right answer is " + correct_answer)
                 self.q_number += 1
             else:
-                print("\t********************")
+                header()
                 print("Congratulations, you successfully completed the quiz")
-                print("You scored: ", self.score)
+                print("You scored: ", self.score, end="\n")
 
         elif category == 3:
             if self.q_number < len(self.aerial_qns) - 1:
@@ -115,17 +117,24 @@ class TriviaGame:
                     print("The right answer is " + correct_answer)
                 self.q_number += 1
             else:
-                print("\t********************")
+                header()
                 print("Congratulations, you successfully completed the quiz")
-                print("You scored: ", self.score)
+                print("You scored: ", self.score, end="\n")
 
-        # break
+
+
             
+def header():
+    """
+    simple header made up of asterisks
+    """
+    print("\n\t********************\n")
+
 
 def game_play():
     """the functions that initialize the game"""
     
-    print("\n\t\t***************")
+    header()
     print("Hello, Below is a menu of Wildlife categories: ")
 
     print("1. Terrestrial wildlife")
@@ -134,6 +143,7 @@ def game_play():
 
     user_option = int(input("Please enter a number of the choice wildlife category to continue: "))
     game_one = TriviaGame()
+    
 
     if user_option == 1:
         for i in range(7):
@@ -149,12 +159,37 @@ def game_play():
             game_one.check_answer(user_option)
 
 
-def verify_user(name):
+    
+    x = repeat()
+    if x == 1:
+        game_play()
+    else:
+        print("\nHope you learnt a lot and had fun.\nGoodbye!")
+        
+    return x
+
+
+def db_connect():
+    """
+    Initializes daabase server credentialss
+    """
+
     conn = mysql.connector.connect(
         host = "127.0.0.1",
         user = "root",
+        passwd = "root",
         database = "users_db"
     )
+    return conn
+
+
+def verify_user(name):
+    """
+    verifies if user is in the database
+    
+    """
+
+    conn = db_connect()
     
     cursor = conn.cursor()
 
@@ -171,13 +206,9 @@ def verify_user(name):
 
 def register_user(name, pwd):
     """
-    
+    Registers a new user
     """
-    conn = mysql.connector.connect(
-        host = "127.0.0.1",
-        user = "root",
-        database = "users_db"
-    )
+    conn = db_connect()
     
     cursor = conn.cursor()
 
@@ -189,11 +220,10 @@ def register_user(name, pwd):
     conn.close()
 
 def get_score(name):
-    conn = mysql.connector.connect(
-        host = "127.0.0.1",
-        user = "root",
-        database = "users_db"
-    )
+    """
+    Gets the score of a user from the database
+    """
+    conn = db_connect()
     
     cursor = conn.cursor()
     sql2 = "SELECT name, score FROM users"
@@ -210,11 +240,11 @@ def get_score(name):
 
 
 def save_score(name, user_score):
-    conn = mysql.connector.connect(
-        host = "127.0.0.1",
-        user = "root",
-        database = "users_db"
-    )
+    """
+    Saves score to database
+    """
+    conn = db_connect()
+
     cursor = conn.cursor()
     sql2 = "UPDATE `users_db`.`users` SET `score` = '%s' WHERE (`name` = '%s')"
     data = (user_score, name)
@@ -222,37 +252,15 @@ def save_score(name, user_score):
     conn.commit()
     conn.close()
 
-
-
-if __name__ == "__main__":
-    
-    user_sign_in = int(input("1. Login\n2. Sign up to play\n3. Play as guest\n4. Learn more\n5. Exit\nYour choice: "))
-
-    if user_sign_in == 1:
-        user_name = input("User Name: ")
-        user_pwd = input("Password: ")
-    
-        if verify_user(user_name) == True:
-            print("Successfully logged in! Welcome ", user_name)
-            print("\t********************\n")
-            game_play()
-        else:
-            print("Invalid credentials")
-
-    elif user_sign_in == 2:
-        new_username = input("Enter username: ")
-        new_user_pwd = input("Enter password: ")
-        register_user(new_username, new_user_pwd)
-        print("Successfully signed up! Welcome ", new_username)
-        print("\t********************\n")
-        game_play()
-
-    elif user_sign_in == 3:
-        game_play()
-    
-    elif user_sign_in == 4:
-        webbrowser.open_new("https://www.wildlifetrusts.org/learning")
-
+def replay(num):
+    choice = int(input("\nDo you want to:\n 1. Play again\n2. Exit\nYour choice: "))
+    if choice == 1:
+        num = 1
+        return num
     else:
-        print("Goodbye!")
+        num = 5
+        return num
 
+def repeat():
+    opt = int((input("\n1. Play again\n2. Exit\nYour choice: ")))
+    return opt
